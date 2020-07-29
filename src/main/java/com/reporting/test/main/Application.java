@@ -1,12 +1,13 @@
 package com.reporting.test.main;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-@SpringBootApplication(scanBasePackages = {"com.reporting.test"})
-@ComponentScan(basePackages = { "com.reporting.test.report"} )
+@SpringBootApplication(scanBasePackages = {"com.reporting.test.*"})
+//@ComponentScan(basePackages = { "com.reporting.test.*"} )
 @EnableMongoRepositories(basePackages = { "com.reporting.test.report.*"} )
 public class Application {
 
